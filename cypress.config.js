@@ -30,8 +30,4 @@ module.exports = defineConfig({
   viewportWidth: 2000,
   viewportHeight: 1000,
   defaultCommandTimeout: 30000,
-  // env: {
-  //   EMAIL: "ziratest365@gmail.com",
-  //   PASSWORD: "Zira@123"
-  // },
 });
