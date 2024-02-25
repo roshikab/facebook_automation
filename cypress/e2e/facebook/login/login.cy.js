@@ -1,19 +1,24 @@
 import * as loginObj from "../../../pageObject/facebook/loginObj";
-import { faker } from '@faker-js/faker';
 import formPage from "../../../page/formPage";
+import buttonPage from "../../../page/buttonPage";
 
 const formP = new formPage();
+const buttonP = new buttonPage();
 
 Given('Visit Facebook URL', () => {
-    cy.visit('https://www.facebook.com/').wait(100)
+    cy.visit('/').wait(100)
+})
+
+And('Verify Input Field is displayed', () => {
+    loginObj.verifyInputField()
+})
+
+And('Verify Login Button is displayed', () => {
+    loginObj.verifyButton()
 })
 
 And('Enter valid credentials', () => {
     loginObj.enterCredentials(Cypress.env('EMAIL'), Cypress.env('PASSWORD'))
-})
-
-And('Enter valid email and invalid password', () => {
-    loginObj.enterCredentials(Cypress.env('EMAIL'), faker.internet.password())
 })
 
 And('Click on Log In button', () => {
@@ -21,15 +26,18 @@ And('Click on Log In button', () => {
 })
 
 And('Enter invalid credentials', () => {
-    loginObj.enterCredentials(faker.internet.email(), faker.internet.password())
+    loginObj.enterCredentials("invalid_email@example.com", "invalid_password")
 })
 
 And('Check if the error message in {string} is {string}', (selector, message) => {
     formP.verifyTextMessage(selector, message);
 })
 
-And('Wait for {int} ms', (time) => {
-    cy.wait(time);
+And('Verify Home button', () => {
+    buttonP.verifyButton("a[aria-label='Home']")
 })
+
+
+
 
 

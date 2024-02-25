@@ -23,11 +23,12 @@ module.exports = defineConfig({
     },
     specPattern: "**/login.feature",
     env: { ...process.env },
+    baseUrl: "https://www.facebook.com/",
   },
   experimentalSessionAndOrigin: true,
   experimentalModifyObstructiveThirdPartyCode: true,
   watchForFileChanges: false,
   viewportWidth: 2000,
   viewportHeight: 1000,
-  defaultCommandTimeout: 30000,
+  defaultCommandTimeout: 5000,
 });
