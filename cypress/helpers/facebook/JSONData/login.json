@@ -1,0 +1,12 @@
+{
+    "selector": {
+        "email": "input[data-testid='royal_email']",
+        "password": "input[data-testid='royal_pass']",
+        "loginButton": "table",
+        "errorMessage": "div#loginform #email_container"
+    },
+    "errorMessage": {
+        "invalidCredentials": "The email you entered isn’t connected to an account. Find your account and log in.",
+        "emptyFields": "The email or mobile number you entered isn’t connected to an account. Find your account and log in."
+    }
+}
