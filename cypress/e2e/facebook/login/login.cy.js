@@ -5,7 +5,7 @@ import buttonPage from "../../../page/buttonPage";
 const formP = new formPage();
 const buttonP = new buttonPage();
 const validCredentials = {
-    email: Cypress.env('EMAIL'),
+    email_or_phoneNumber: Cypress.env('EMAIL_OR_PHONENUMBER'),
     password: Cypress.env('PASSWORD'),
 }
 
@@ -22,7 +22,7 @@ And('Verify Login Button is displayed', () => {
 })
 
 And('Enter valid credentials', () => {
-    loginObj.enterCredentials(validCredentials.email, validCredentials.password)
+    loginObj.enterCredentials(validCredentials.email_or_phoneNumber, validCredentials.password)
 })
 
 And('Click on Log In button', () => {

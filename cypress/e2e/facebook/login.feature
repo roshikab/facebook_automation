@@ -5,11 +5,11 @@ Feature: Facebook Login
         Given Visit Facebook URL
         And Url should contain "facebook.com"
 
-    Scenario: To Verify Input Field and Button Availability
+    Scenario: To verify Input Field and Button Availability
         And Verify Input Field is displayed
         And Verify Login Button is displayed
 
-    Scenario: To verify successful login
+    Scenario: To verify that the user should be directed to the facebook home page when login is successful
         And Enter valid credentials
         And Click on Log In button
         And Url should contain "facebook.com"
