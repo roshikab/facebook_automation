@@ -1,8 +1,9 @@
 Feature: Facebook Login
 
-    Positive and negative test for Facebook Login
+    Positive and negative test scenario for Facebook Login
     Background: Precondition
         Given Visit Facebook URL
+        And Url should contain "facebook.com"
 
     Scenario: To Verify Input Field and Button Availability
         And Verify Input Field is displayed

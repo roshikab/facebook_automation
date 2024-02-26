@@ -4,6 +4,10 @@ import buttonPage from "../../../page/buttonPage";
 
 const formP = new formPage();
 const buttonP = new buttonPage();
+const validCredentials = {
+    email: Cypress.env('EMAIL'),
+    password: Cypress.env('PASSWORD'),
+}
 
 Given('Visit Facebook URL', () => {
     cy.visit('/').wait(100)
@@ -18,7 +22,7 @@ And('Verify Login Button is displayed', () => {
 })
 
 And('Enter valid credentials', () => {
-    loginObj.enterCredentials(Cypress.env('EMAIL'), Cypress.env('PASSWORD'))
+    loginObj.enterCredentials(validCredentials.email, validCredentials.password)
 })
 
 And('Click on Log In button', () => {
