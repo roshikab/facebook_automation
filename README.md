@@ -35,10 +35,10 @@ This project automates the process of logging into the Facebook website. It incl
 
 4. You can run the Cypress automation locally to test or make adjustments:
 
-```
-npx cypress open
-npx cypress run
-```
+   ```
+   npx cypress open
+   npx cypress run
+   ```
 
 
 
