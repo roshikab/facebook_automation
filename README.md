@@ -39,7 +39,8 @@ This project automates the process of logging into the Facebook website. It incl
    npx cypress open
    npx cypress run
    ```
-
+### Automation in Action
+![Demo]("./../demo.gif)
 
 
 
