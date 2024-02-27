@@ -15,11 +15,17 @@ Feature: Facebook Login
         And Url should contain "facebook.com"
         And Verify Home button
 
-    Scenario:To verify error message is displayed with invalid credentials
+    Scenario: To verify error message is displayed with invalid email and invalid password
         And Enter invalid credentials
         And Click on Log In button
-        And Check if the error message in "div#loginform #email_container" is "The email you entered isn’t connected to an account. Find your account and log in."
+        And Check if the error message in "#error_box div.fsl" is "Wrong Credentials"
 
-    Scenario:To verify error message is displayed with empty fields
+    Scenario: To verify error message is displayed with empty email or phone number and password fields
         And Click on Log In button
-        And Check if the error message in "div#loginform #email_container" is "The email or mobile number you entered isn’t connected to an account. Find your account and log in."
+        And Check if the error message in "#error_box div.fsl" is "Wrong Credentials"
+
+    Scenario: To verify error message is displayed when valid email or phone number and invalid password is entered
+        And Enter valid email or phone number and invalid password
+        And Click on Log In button
+        And Url should contain "/login"
+        And Check if the error message in "#error_box div.fsl" is "Wrong Credentials"

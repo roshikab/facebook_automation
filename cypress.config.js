@@ -25,7 +25,7 @@ module.exports = defineConfig({
     env: { ...process.env },
     baseUrl: "https://www.facebook.com/",
   },
-  experimentalSessionAndOrigin: true,
+  // experimentalSessionAndOrigin: true,
   experimentalModifyObstructiveThirdPartyCode: true,
   watchForFileChanges: false,
   viewportWidth: 2000,

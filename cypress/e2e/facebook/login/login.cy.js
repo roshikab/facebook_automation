@@ -25,6 +25,10 @@ And('Enter valid credentials', () => {
     loginObj.enterCredentials(validCredentials.email_or_phoneNumber, validCredentials.password)
 })
 
+And('Enter valid email or phone number and invalid password', () => {
+    loginObj.enterCredentials(validCredentials.email_or_phoneNumber, "invalid_password")
+})
+
 And('Click on Log In button', () => {
     loginObj.clickOnLogInButton()
 })
