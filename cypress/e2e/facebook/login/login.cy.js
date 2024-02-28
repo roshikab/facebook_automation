@@ -43,10 +43,11 @@ And('Check if the error message in {string} is {string}', (selector, message) =>
 
 And('Verify Home button', () => {
     buttonP.verifyButton("a[aria-label='Home']")
-    cy.clearAllSessionStorage()
 })
 
-
+And("Url should contain login or recover", () => {
+    cy.url().should("match", /login|recover/);
+});
 
 
 

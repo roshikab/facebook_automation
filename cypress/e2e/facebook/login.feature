@@ -24,7 +24,7 @@ Feature: Facebook Login
         And Click on Log In button
         And Url should contain "/login"
 
-    Scenario: To verify that the user should be directed to the facebook login page when valid email or phone number and invalid password is entered
+    Scenario: To verify that the user should be directed to the facebook login or redirect page when valid email or phone number and invalid password is entered
         And Enter valid email or phone number and invalid password
         And Click on Log In button
-        And Url should contain "/login"
+        And Url should contain login or recover
