@@ -10,10 +10,17 @@ class formPage {
     }
 
 
-    //To Click Specific Button
+    //To InputFieldAvailability
     verifyInputFieldAvailability(selector) {
         cy.get(selector)
             .should('be.visible')
+            .wait(500)
+    }
+
+    //To field availability
+    verifyFieldAvailability(selector) {
+        cy.get(selector)
+            .should('exist')
             .wait(500)
     }
 

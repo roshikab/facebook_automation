@@ -43,6 +43,7 @@ And('Check if the error message in {string} is {string}', (selector, message) =>
 
 And('Verify Home button', () => {
     buttonP.verifyButton("a[aria-label='Home']")
+    cy.clearAllSessionStorage()
 })
 
 

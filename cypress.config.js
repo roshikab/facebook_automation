@@ -25,10 +25,10 @@ module.exports = defineConfig({
     env: { ...process.env },
     baseUrl: "https://www.facebook.com/",
   },
-  // experimentalSessionAndOrigin: true,
   experimentalModifyObstructiveThirdPartyCode: true,
   watchForFileChanges: false,
   viewportWidth: 2000,
   viewportHeight: 1000,
   defaultCommandTimeout: 5000,
+  pageLoadTimeout: 30000,
 });
